@@ -1,0 +1,28 @@
+{
+  "name": "Rubric",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "funDecisions": {
+      "type": [
+        "number"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "samples": {
+      "type": "hasMany",
+      "model": "Sample",
+      "foreignKey": "rubricId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

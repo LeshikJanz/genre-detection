@@ -1,0 +1,27 @@
+{
+  "name": "Sample",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "dictionaries": {
+      "type": [
+        "string"
+      ]
+    },
+    "vectors": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

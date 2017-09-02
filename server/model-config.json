@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Rubric": {
+    "dataSource": "mongodbDs",
+    "public": true
+  },
+  "Sample": {
+    "dataSource": "mongodbDs",
+    "public": true
   }
 }
