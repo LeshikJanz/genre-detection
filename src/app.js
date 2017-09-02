@@ -67,8 +67,10 @@ const history = syncHistoryWithStore(hashHistory, store);
  * @return {string} - HTML markup for the component
  */
 ReactDOM.render(
-  <div style={{height: '100%'}}>
-    <Router history={history} routes={routes}/>
-  </div>,
+  <Provider store={store}>
+    <div style={{height: '100%'}}>
+      <Router history={history} routes={routes}/>
+    </div>
+  </Provider>,
   document.getElementById('root')
 );

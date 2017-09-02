@@ -4,16 +4,20 @@ import { urls } from "urls";
 import { Base } from "./Main/Base";
 import { Main } from "./Main/index";
 import { Header } from "./Header/index";
+import { Registration } from "./Registration/index";
+import { Learn } from "./Learn/index";
 
 /**
  * Routing between pages using React-Router-Redux
  *
  * See: https://github.com/reactjs/react-router-redux
  */
-export default (
+export default(
   <Route path={urls.index} component={Header}>
     <Route component={Base}>
       <IndexRoute component={Main}/>
+      <Route path={urls.registration} component={Registration}></Route>
+      <Route path={urls.learn} component={Learn}></Route>
     </Route>
   </Route>
 );
