@@ -1,0 +1,9 @@
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\bin\Release\KR2.exe.config
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\bin\Release\KR2.exe
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\bin\Release\KR2.pdb
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\obj\Release\KR2.csprojResolveAssemblyReference.cache
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\obj\Release\KR2.Form1.resources
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\obj\Release\KR2.Properties.Resources.resources
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\obj\Release\KR2.csproj.GenerateResource.Cache
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\obj\Release\KR2.exe
+D:\Work\Moiseev\Project\IOFS\KR2\KR2\KR2\obj\Release\KR2.pdb

@@ -1,0 +1,13 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+
+  > .link-container {
+    display: flex;
+    justify-content: space-between;
+
+    > a {
+      margin: 20px;
+    }
+  }
+}

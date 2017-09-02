@@ -1,0 +1,27 @@
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\bin\Release\KR1.exe.config
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\bin\Release\KR1.exe
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\bin\Release\KR1.pdb
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.csprojResolveAssemblyReference.cache
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.Form1.resources
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.Properties.Resources.resources
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.csproj.GenerateResource.Cache
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.exe
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.pdb
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\bin\Release\KR1.exe.config
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.exe
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.pdb
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\bin\Release\KR1.exe
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\bin\Release\KR1.pdb
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.csprojResolveAssemblyReference.cache
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.Form1.resources
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.Properties.Resources.resources
+d:\TBM\Контрольная\Moiseev\2016-2017\2 семестр\ИОФС\Project\IOFS\KR1\KR1\KR1\obj\Release\KR1.csproj.GenerateResource.Cache
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\bin\Release\KR1.exe.config
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\obj\Release\KR1.exe
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\obj\Release\KR1.pdb
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\bin\Release\KR1.exe
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\bin\Release\KR1.pdb
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\obj\Release\KR1.csprojResolveAssemblyReference.cache
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\obj\Release\KR1.Form1.resources
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\obj\Release\KR1.Properties.Resources.resources
+d:\Work\Moiseev\Project\IOFS\KR1\KR1\obj\Release\KR1.csproj.GenerateResource.Cache

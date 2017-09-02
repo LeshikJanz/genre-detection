@@ -1,0 +1,13 @@
+@import "../../../styles/common";
+@import "../../../styles/buttons";
+
+form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  > button {
+    height: 40px;
+    width: 120px;
+  }
+}

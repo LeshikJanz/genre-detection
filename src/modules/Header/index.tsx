@@ -1,13 +1,18 @@
 import * as React from "react";
 import { urls } from "urls";
 import { Link } from 'react-router';
+import './styles/style.scss';
 
 export const Header = (props) => (
   <div>
-    <h1>Welcome!</h1>
-    <Link to={urls.index}>Go to main</Link><br/>
-    <Link to={urls.learn}>Go to learn page</Link><br/>
-    <Link to={urls.registration}>Go to registration</Link><br/>
+    <div className="header-container main-container">
+      <h1>Welcome!</h1>
+      <div className="link-container">
+        <Link to={urls.learn}>Learn</Link>
+        <Link to={urls.registration}>Registration</Link>
+      </div>
+    </div>
     {props.children}
   </div>
+
 );

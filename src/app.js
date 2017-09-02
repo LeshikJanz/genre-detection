@@ -4,26 +4,19 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-// import rootSaga from './modules/sagas';
+import rootSaga from './modules/sagas';
 import reducer from './reducers';
 import { Router, hashHistory } from 'react-router';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import routes from './modules/routes';
 import thunk from 'redux-thunk';
-// import 'react-notifications/lib/notifications.css';
-// require('./app.scss');
-// require('./styles/animations.scss');
-// import 'react-select/dist/react-select.css';
-// import { NotificationContainer } from 'react-notifications';
-// import 'react-grid-layout/css/styles.css';
-// import Spinner from './components/Spinner/index';
 
 /**
  * Saga Middleware for Redux to Handle Side Effects
  *
  * See: https://github.com/redux-saga/redux-saga
  */
-// const sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 
 /**
  * Redux store. Predictable state container for JavaScript apps
@@ -39,7 +32,7 @@ import thunk from 'redux-thunk';
  */
 const store = createStore(reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(routerMiddleware(hashHistory), thunk)
+  applyMiddleware(sagaMiddleware, routerMiddleware(hashHistory), thunk)
 );
 
 /**
@@ -59,7 +52,7 @@ const history = syncHistoryWithStore(hashHistory, store);
  *
  * @returns {void}
  */
-// sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootSaga);
 
 /**
  * Renders the component

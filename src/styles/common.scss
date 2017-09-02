@@ -1,0 +1,33 @@
+@import "./fonts";
+
+.main-container {
+  margin: 0 170px 3% 90px;
+}
+
+.form-element {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 100%;
+  font-family: SansSerif;
+
+  > *:last-child {
+    margin-bottom: 20px;
+  }
+
+  label {
+    padding-bottom: 10px;
+  }
+}
+
+label {
+  font-family: Cooper-Medium;
+  font-size: 18px;
+}
+
+input, textarea, select {
+  font-family: Cooper-Light;
+  font-size: 14px;
+  padding: 10px;
+}

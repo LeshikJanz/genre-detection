@@ -18,6 +18,7 @@
  * Лоэдеры используются для преобразования css, ts файлов в bundle.js
  * */
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 /** Плагин достает css(или какие мы укажем файлы) в отдельный(не bundle.js) файл. Т.е. теперь стили содержаться в отдельном app.css, который подключен в bundle.js */
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -132,6 +133,14 @@ module.exports = {
       filename: 'app.css',  //имя файла, в который собрать весь css
       disable: false,
       allChunks: true
+    }),
+    // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
+    // inside your code for any environment checks; UglifyJS will automatically
+    // drop any unreachable code.
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
     }),
   ]
 
