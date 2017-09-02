@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 // import rootSaga from './modules/sagas';
-// import reducer from '../reducers';
-// import { Router, hashHistory } from 'react-router';
-// import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
-// // import routes from './modules/routes';
-// import thunk from 'redux-thunk';
+import reducer from './reducers';
+import { Router, hashHistory } from 'react-router';
+import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
+import routes from './modules/routes';
+import thunk from 'redux-thunk';
 // import 'react-notifications/lib/notifications.css';
 // require('./app.scss');
 // require('./styles/animations.scss');
@@ -37,10 +37,10 @@ import createSagaMiddleware from 'redux-saga'
  *
  * @returns {StoreCreator} store - Redux store
  */
-// const store = createStore(reducer,
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-//   applyMiddleware(sagaMiddleware, routerMiddleware(hashHistory), thunk)
-// );
+const store = createStore(reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(routerMiddleware(hashHistory), thunk)
+);
 
 /**
  * Sync router history with Redux Saga
@@ -50,7 +50,7 @@ import createSagaMiddleware from 'redux-saga'
  *
  * @returns {any} history - history
  */
-// const history = syncHistoryWithStore(hashHistory, store);
+const history = syncHistoryWithStore(hashHistory, store);
 
 /**
  * Run Saga middleware
@@ -67,13 +67,8 @@ import createSagaMiddleware from 'redux-saga'
  * @return {string} - HTML markup for the component
  */
 ReactDOM.render(
-  // <Provider store={store}>
-  //   <div style={{ height: '100%' }}>
-  //     <Router history={history} routes={routes}/>
-  //     <Spinner />
-  //     <NotificationContainer/>
-  //   </div>
-  // </Provider>,
-  <h1>Genre Detection</h1>,
+  <div style={{height: '100%'}}>
+    <Router history={history} routes={routes}/>
+  </div>,
   document.getElementById('root')
 );
