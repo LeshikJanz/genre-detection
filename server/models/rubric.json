@@ -11,7 +11,17 @@
     },
     "funDecisions": {
       "type": [
-        "number"
+        "object",
+        {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "freq": {
+              "type": "number"
+            }
+          }
+        }
       ]
     }
   },

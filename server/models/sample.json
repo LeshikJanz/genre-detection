@@ -6,17 +6,34 @@
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string"
-    },
     "dictionaries": {
       "type": [
-        "string"
+        "object",
+        {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "freq": {
+              "type": "number"
+            }
+          }
+        }
       ]
     },
     "vectors": {
       "type": [
-        "string"
+        "object",
+        {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "freq": {
+              "type": "number"
+            }
+          }
+        }
       ]
     }
   },

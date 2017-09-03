@@ -5,7 +5,7 @@ import { Base } from "./Main/Base";
 import { Main } from "./Main/index";
 import { Header } from "./Header/index";
 import { Registration } from "./Registration/index";
-import { Learn } from "./Learn/index";
+import Learn from "./Learn/containers/index";
 
 /**
  * Routing between pages using React-Router-Redux
