@@ -1,0 +1,11 @@
+.education-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  .education-button {
+    height: 110px;
+    width: 340px;
+    font-size: 28px;
+  }
+}

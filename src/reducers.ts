@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import { routerReducer } from "react-router-redux";
-import learnReducer from "modules/Learn/reducers/learnReducer";
+import rubricReducer from "modules/Learn/reducers/rubricsReducer";
+import sampleReducer from "modules/Learn/reducers/samplesReducer";
 
 export default combineReducers({
   routing: routerReducer,
-  rubrics: learnReducer
+  rubrics: rubricReducer,
+  samples: sampleReducer
 });

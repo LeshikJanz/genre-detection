@@ -1,14 +1,14 @@
 import { createReducer } from 'utils/createReducer';
-import { getRubricsInit, getRubricsDone } from "../actions";
 import { IRubric } from "interfaces";
+import { getSamplesDone } from "../../actions";
 
 /**
- * Initial state for rubric reducer
+ * Initial state for sample reducer
  */
 const initialState = [];
 
 export default createReducer({
-    [getRubricsDone]: (state: any, payload: IRubric[]) => ([
+    [getSamplesDone]: (state: any, payload: IRubric[]) => ([
       ...state,
       ...payload
     ])

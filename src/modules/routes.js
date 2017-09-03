@@ -4,8 +4,9 @@ import { urls } from "urls";
 import { Base } from "./Main/Base";
 import { Main } from "./Main/index";
 import { Header } from "./Header/index";
-import { Registration } from "./Registration/index";
-import Learn from "./Learn/containers/index";
+import { Registration } from "./Registration";
+import Learn from "./Learn/containers";
+import Education from "./Education/containers";
 
 /**
  * Routing between pages using React-Router-Redux
@@ -18,6 +19,7 @@ export default(
       <IndexRoute component={Main}/>
       <Route path={urls.registration} component={Registration}></Route>
       <Route path={urls.learn} component={Learn}></Route>
+      <Route path={urls.education} component={Education}></Route>
     </Route>
   </Route>
 );

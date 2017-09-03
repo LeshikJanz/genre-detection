@@ -6,3 +6,9 @@ export const createNewSample = (sample: ISample) => {
     .post(`Samples`, sample)
     .then((sample: ISample) => sample);
 };
+
+export const getSamples = () => {
+  return request
+    .get(`Samples`, {})
+    .then((samples: ISample[]) => samples);
+};

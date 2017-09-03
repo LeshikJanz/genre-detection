@@ -1,8 +1,11 @@
 import { put, takeEvery, select } from 'redux-saga/effects'
-import { educationInit, educationError, getRubricsInit, getRubricsDone, educationDone } from "./actions";
+import {
+  educationInit, educationError, getRubricsInit, getRubricsDone, educationDone,
+  getSamplesDone, getSamplesInit
+} from "../actions";
 import { Task } from "redux-saga";
 import { getRubrics } from "api/rubric";
-import { createNewSample } from "../../api/sample";
+import { createNewSample, getSamples } from "../../api/sample";
 import { ISample } from "interfaces";
 
 export function* educationInitSaga({ payload }: ISample): Iterator<Object | Task> {
@@ -24,8 +27,18 @@ export function* getRubricsSaga(): Iterator<Object | Task> {
   }
 }
 
+export function* getSamplesSaga(): Iterator<Object | Task> {
+  try {
+    const samples = yield getSamples();
+    yield put(getSamplesDone(samples))
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 
 export function* learnSaga() {
   yield takeEvery(educationInit().type, educationInitSaga);
   yield takeEvery(getRubricsInit().type, getRubricsSaga);
+  yield takeEvery(getSamplesInit().type, getSamplesSaga);
 }

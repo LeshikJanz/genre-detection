@@ -10,6 +10,7 @@ export const Header = (props) => (
       <div className="link-container">
         <Link to={urls.learn}>Learn</Link>
         <Link to={urls.registration}>Registration</Link>
+        <Link to={urls.education}>Education</Link>
       </div>
     </div>
     {props.children}

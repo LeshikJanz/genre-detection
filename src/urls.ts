@@ -5,5 +5,6 @@ export const urls = {
   index: '/',
   learn: 'learn',
   auth: 'auth',
-  registration: 'registration'
+  registration: 'registration',
+  education: 'education'
 };

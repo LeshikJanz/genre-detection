@@ -1,6 +1,7 @@
 @import "./mixins.scss";
 
 button {
+  cursor: pointer;
   font-size: inherit;
   background-color: white;
   border: transparent;
