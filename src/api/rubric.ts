@@ -6,3 +6,9 @@ export const getRubrics = () => {
     .get(`Rubrics`, {})
     .then((rubrics: IRubric[]) => rubrics);
 };
+
+export const updateRubricById = (rubric: IRubric) => {
+  return request
+    .put(`Rubrics/${rubric.id}`, rubric)
+    .then((rubrics: IRubric[]) => rubrics);
+};

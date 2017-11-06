@@ -9,7 +9,6 @@ const initialState = [];
 
 export default createReducer({
     [getRubricsDone]: (state: any, payload: IRubric[]) => ([
-      ...state,
       ...payload
     ])
   },

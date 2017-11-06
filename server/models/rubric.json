@@ -9,6 +9,25 @@
     "name": {
       "type": "string"
     },
+    "dictionaries": {
+      "type": [
+        "object",
+        {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "freq": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "samplesCount": {
+      "type": "number",
+      "default": 0
+    },
     "funDecisions": {
       "type": [
         "object",

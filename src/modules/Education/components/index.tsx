@@ -17,8 +17,7 @@ export const Education = ({ rubrics, samples }) => {
       r.funDecions = emptyFunctions[i];
       return r;
     });
-  }
-
+  };
 
   const getFunDecisions = () => {
     const vectors = getVectors();
@@ -44,12 +43,12 @@ export const Education = ({ rubrics, samples }) => {
       //   if ( s.rubricId === )
       //     })
 
-    } while ( isFunctionsCorrect )
-  }
+    } while (isFunctionsCorrect)
+  };
 
   const handleEducation = () => {
     getFunDecisions();
-  }
+  };
 
   return (
     <div className="education-container">
@@ -58,4 +57,4 @@ export const Education = ({ rubrics, samples }) => {
       </button>
     </div>
   )
-}
+};

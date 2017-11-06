@@ -4,6 +4,10 @@ export const getRubricsInit = createAction('GET_RUBRICS_INIT');
 export const getRubricsDone = createAction('GET_RUBRICS_DONE');
 export const getRubricsError = createAction('GET_RUBRICS_ERROR');
 
+export const updateRubricInit = createAction('UPDATE_RUBRIC_INIT');
+export const updateRubricDone = createAction('UPDATE_RUBRIC_DONE');
+export const updateRubricError = createAction('UPDATE_RUBRIC_ERROR');
+
 export const getSamplesInit = createAction('GET_SAMPLES_INIT');
 export const getSamplesDone = createAction('GET_SAMPLES_DONE');
 export const getSamplesError = createAction('GET_SAMPLES_ERROR');

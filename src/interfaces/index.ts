@@ -21,6 +21,7 @@ declare interface IDecision {
 export
 declare interface IRubric extends Identifiable {
   name: string,
+  samplesCount: number,
   funDecisions?: IDecision[]
 }
 
