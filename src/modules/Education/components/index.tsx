@@ -1,60 +1,75 @@
 import * as React from 'react';
 import '../styles/styles.scss';
+import { is } from "redux-saga/utils";
 
 export const Education = ({ rubrics, samples }) => {
+    const generateСharacteristicVector = (fullDictionary) =>
+      rubrics.map(r => ({
+        ...r,
+        characteristicVector: [
+          ...fullDictionary.map(f => r.dictionaries.find(d => d.name == f.name) || {
+            ...f,
+            freq: 0
+          }),
+          { freq: 0.000001 }],
+        weightVectors: [...fullDictionary.map(f => 0), 0]
+      }));
 
-  const getVectors = () => samples.map(s => [...samples.map(m => m.dictionaries)])
-    .map((v) => v.reduce((sum, k) => sum.concat(k)).concat({ freq: 0.01 }));
+    const multiplyVectors = (v1, v2) => v1.reduce((sum, elem, i) => sum + elem * v2[i], 0);
 
-  const getEmptyFunctions = () =>
-    rubrics.map(r => new Array(getVectors()[0].length).fill(0));
+    const decrementFun = (v1, v2) => v1.map((w, i) => v2[i] - w);
 
-  const getRubricsWithInitVectorsAndFunDecisions = (vectors) => {
-    const emptyFunctions = getEmptyFunctions();
+    const incrementFun = (v1, v2) => v1.map((w, i) => w + v2[i]);
 
-    return rubrics.map((r, i) => {
-      r.vectors = vectors.filter(s => s.rubricId === r.id);
-      r.funDecions = emptyFunctions[i];
-      return r;
-    });
-  };
+    const checkAppropriarity = (updatedRubrics) => {
+      let isAppropriate;
 
-  const getFunDecisions = () => {
-    const vectors = getVectors();
-    console.log('vectors');
-    console.log(vectors);
-    rubrics = getRubricsWithInitVectorsAndFunDecisions(vectors);
-    console.log('rubrics');
-    console.log(rubrics);
+      do {
+        isAppropriate = false;
 
-    let isFunctionsCorrect = false;
+        for (let i = 0; i < updatedRubrics.length; i++) {
+          let isCorrected = false;
+          for (let j = 0; j < updatedRubrics.length; j++) {
+            updatedRubrics[j].decisionCoefficient = multiplyVectors(updatedRubrics[i].characteristicVector.map(c => c.freq),
+              updatedRubrics[j].weightVectors);
+          }
+          for (let j = 0; j < updatedRubrics.length; j++) {
+            if (i !== j) {
+              if (updatedRubrics[i].decisionCoefficient <= updatedRubrics[j].decisionCoefficient) {
+                isCorrected = isAppropriate = true;
+                updatedRubrics[j].weightVectors = decrementFun(updatedRubrics[i].characteristicVector.map(c => c.freq), updatedRubrics[j].weightVectors);
+              }
+            }
+          }
+          if (isCorrected) {
+            updatedRubrics[i].weightVectors = incrementFun(updatedRubrics[i].characteristicVector.map(c => c.freq), updatedRubrics[i].weightVectors);
+          }
+        }
+      }
+      while (isAppropriate);
+    }
 
-    do {
-      isFunctionsCorrect = false;
-      rubrics.forEach(r => {
-        r.vectors.forEach(v => {
-          v.forEach((w, i) => {
-            w.freq * funDecisions
-          })
-        })
-      })
+    const generateFunDecisions = (rubricsWithCharacteristicVector) => {
+      const updatedRubrics = rubricsWithCharacteristicVector.map(r => ({
+        ...r,
+        decisionCoefficient: multiplyVectors(r.characteristicVector.map(c => c.freq), r.weightVectors)
+      }));
 
-      // samples.forEach(s => {
-      //   if ( s.rubricId === )
-      //     })
+      checkAppropriarity(updatedRubrics);
+    };
 
-    } while (isFunctionsCorrect)
-  };
+    const handleEducation = () => {
+      const fullDictionary = rubrics.reduce((sum, r) => sum.concat(r.dictionaries), []);
+      const rubricsWithCharacteristicVector = generateСharacteristicVector(fullDictionary);
+      const funDecision = generateFunDecisions(rubricsWithCharacteristicVector);
+    };
 
-  const handleEducation = () => {
-    getFunDecisions();
-  };
-
-  return (
-    <div className="education-container">
-      <button className="primary education-button" onClick={handleEducation}>
-        Начать обучение
-      </button>
-    </div>
-  )
-};
+    return (
+      <div className="education-container">
+        <button className="primary education-button" onClick={handleEducation}>
+          Начать обучение
+        </button>
+      </div>
+    )
+  }
+;

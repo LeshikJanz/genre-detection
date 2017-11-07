@@ -4,15 +4,13 @@ import { Education } from "../components/index";
 import { compose, lifecycle, withState } from 'recompose';
 
 const mapStateToProps: any = (state): any => ({
-  rubrics: state.rubrics,
-  samples: state.samples
+  rubrics: state.rubrics
 });
 
 const mapDispatchToProps = (dispatch) => {
   return {
     addSample: (text) => dispatch(educationInit(text)),
     getRubrics: () => dispatch(getRubricsInit()),
-    getSamples: () => dispatch(getSamplesInit()),
   }
 };
 
@@ -21,7 +19,6 @@ export default compose(
   lifecycle({
     componentDidMount() {
       this.props.getRubrics();
-      this.props.getSamples();
     }
   }))
 (Education);

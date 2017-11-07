@@ -26,7 +26,7 @@ export const Learn = ({ allRubrics, updateRubric }) => {
       .reduce(updateFrequence, new Map())
       .forEach((w, i, map) => dictionaries.push({ name: i, freq: w / map.size }));
 
-    dictionaries = dictionaries.sort((a, b) => b.freq - a.freq)
+    return dictionaries.sort((a, b) => b.freq - a.freq)
       .slice(0, NUMBER_KEY_WORDS);
   };
 
